@@ -1,0 +1,162 @@
+*
+    margin 0
+    padding 0
+
+html
+body
+    position fixed
+    top 0
+    left 0
+    width 100%
+    height 100%
+
+canvas
+    position absolute
+    top 0
+    left 0
+    width 100%
+    height 100%
+
+
+// Container_Planet_Click
+
+.container
+    position absolute
+    display flex 
+    flex-direction row
+    justify-content space-around
+    align-items center
+    z-index 100
+    top 24%
+    right 12%
+    height 38%
+    width 75%
+    .galaxy 
+        position relative
+        height 100%
+        width: 28%
+
+
+// Container_Start
+
+
+.container_start
+    position absolute
+    display flex 
+    justify-content center
+    align-items center
+    z-index 100
+    top 87%
+    right 32.5%
+    height 8%
+    width 35%
+    background rgba(255, 255, 255, 0.7)
+    border-radius 10px
+    animation-name float2
+    animation-duration 3s
+    animation-iteration-count infinite
+    will-change transform
+    h1
+        opacity 1
+        font-family 'Montserrat', sans-serif
+        font-weight medium
+        font-size 1.5em
+
+.line
+    position absolute
+    top 97%
+    right 40%
+    height 0.5%
+    width 20%
+    z-index 100
+    background rgba(255, 255, 255, 0.7)
+    border-radius 10px
+    animation-name float
+    animation-duration 3s
+    animation-iteration-count infinite
+
+
+@keyframes float{
+    0%  {transform: translateY(0%);}
+    50%{transform: translateY(100%);}
+    100%{transform: translateY(0%);}
+}
+
+@keyframes float2{
+    0%  {transform: translateY(0%);}
+    50%{transform: translateY(-10%);}
+    100%{transform: translateY(0%);}
+}
+
+// Container_Scroll
+
+.container_scroll
+    position absolute
+    z-index 100
+    top 88%
+    left 2%
+    height 6%
+    width 12%
+    background rgba(255, 255, 255, 0.7)
+    border-radius 10px
+    animation-name float2
+    animation-duration 3s
+    animation-iteration-count infinite
+    will-change transform
+    display none
+    padding-top 0.7%
+    text-align center
+    h3
+        opacity 1
+        font-family 'Montserrat', sans-serif
+        font-weight medium
+
+
+
+// Container_Sound
+
+
+.container_equalizer
+    position absolute
+    z-index 100
+    top 92%
+    left 95%
+    height 4%
+    width 8%
+    display: none
+
+
+.bar
+    position absolute
+    width 6px
+    height 32px
+    background #555555
+    animation-duration 1s
+    animation-iteration-count infinite
+    animation-fill-mode backwards
+    will-change transform
+
+.bar.active 
+    animation-name equalizer-bar-bounce
+
+.bar-1 
+    left 0px
+    animation-delay 0.4s
+.bar-2 
+    left 10px
+    animation-delay 0.3s
+.bar-3 
+    left 20px
+    animation-delay 0.8s
+.bar-4 
+    left 30px
+    animation-delay 0.1s
+.bar-5 
+    left 40px
+    animation-delay 0.6s
+
+@keyframes equalizer-bar-bounce{
+    0%   {transform: scaleY(0.2)}
+    10%  {transform: scaleY(1)}
+    100% {transform: scaleY(0.2)}
+}
