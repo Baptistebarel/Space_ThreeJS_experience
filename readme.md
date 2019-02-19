@@ -4,7 +4,7 @@
 ## Installation 
 
 This project use webpack, node.js, stylus and three.js
-To begin the experience you need to enter this line : "npm run dev" on the terminal.
+To begin the experience you need to enter these lines : "npm i" and "npm run dev" on the terminal.
 
 ## Features 
 
